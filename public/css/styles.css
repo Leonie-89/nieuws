@@ -24,6 +24,12 @@ body {
   padding: 1px 30px;
 }
 
+#footer {
+  background-color: #716355;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+}
 
 /*----------------------------navigatie---------------------------------*/
 #navigatie {
@@ -125,6 +131,16 @@ img {
 
 #banner_mobiel {
   display: initial;
+}
+
+nav a:first-child {
+  margin-left: 0%;
+}
+
+nav a {
+  padding: 2px;
+  padding-right: 5px;
+  font-size: 0.8em;
 }
 
 }
