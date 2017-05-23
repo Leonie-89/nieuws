@@ -1,35 +1,132 @@
+
+/*-------------------------------body & structuur -----------------------*/
+
+
 body {
   font-family: helvetica;
-  width: 90%;
-  margin: 25px auto;
   line-height: 1.4em;
+  font-family: 'Raleway', sans-serif;
+
 }
 
-section {
-  margin: 25px 0;
+#nieuwsbericht {
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #F3F3EB;
+    width: 70%;
+    overflow: hidden;
+}
+
+#kop {
+  margin: 30px auto 0 auto;
+  width: 70%;
+  background-color: #716355;
+  padding: 1px 30px;
+}
+
+
+/*----------------------------navigatie---------------------------------*/
+#navigatie {
+  background-color: #716355;
+}
+
+
+nav a:first-child {
+  margin-left: 15%;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #F3F3EB;
+  font-weight: bold;
+  padding: 20px 25px 20px 0;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+/*----------------------------afbeeldingen---------------------------------*/
+
+#banner {
+  width: 100%;
+}
+
+#banner_mobiel {
+  display: none;
 }
 
 img {
-  max-width: 100%;
+  width: 50%;
+  float: left;
+  padding-right: 20px;
 }
 
+
+/*-------------------------------fonts--------------------------------------*/
+
 p {
-  margin: 10px 0;
+  color: #696055;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #F3F3EB;
+  text-align: center;
 }
 
 h2 {
+  font-size: 1.5em;
   margin: 25px 0;
+  color: #F3F3EB;
 }
 
 h3 {
+  font-size: 1.2em;
   display: inline;
+  color: #F3F3EB;
 }
 
-nav {
-  margin: 25px 0;
+#kop p {
+  color: #F3F3EB;
 }
 
-nav a {
-  display: inline-block;
-  margin-right: 5px;
+#kop a {
+  color: #F3F3EB;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
+
+#verder_terug a{
+  text-decoration: none;
+  color: #EE7F47;
+}
+/*-------------------------------@media--------------------------------------*/
+
+@media only screen and (max-width: 700px) {
+
+img {
+  float: none;
+  width: 100%;
+}
+
+#banner {
+  display: none;
+}
+
+#banner_mobiel {
+  display: initial;
+}
+
+}
+
+

@@ -1,29 +1,31 @@
 <% include header %>
 
-<h1>Nieuws demo homepage</h1>
+<img src="./img/banner.png" id="banner"/>
+<img src="./img/banner_mobiel.png" id="banner_mobiel"/>
 
-<nav>
-  <h3>Categorieën:</h3>
+
+<nav id="navigatie">
   <% for (var i = 0; i < categorieen.length; i++) { %>
-    <a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+    <a href="/categorieen/<%- i %> id="link"><%- categorieen[i] %></a>
   <% } %>
 </nav>
 
-
+<div id="container"/>
   <% var teller = 1; %>
   <% nieuws.forEach(function(item){ %>
-    <section>
-        <h2>
-          <a href=/items/<%- item.id %>><%- item.titel %></a>
-        </h2>
-        <img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
-        <p><%- item.datum %></p>
 
+        <div id="kop"> 
+            <h2><a href=/items/<%- item.id %>><%- item.titel %></a></h2>
+        </div>
+        
+        <div id="nieuwsbericht">
+          <img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
         <p>
-          <%- item.samenvatting %>
+          <%- item.datum %> - <%- item.samenvatting %>
         </p>
-    </section>
+        <span id="verder_terug"><h3><a href=/items/<%- item.id %>>Lees Verder >></a></h3></span>
+    </div>
     <% teller++;}); %>
-
+</div>
 
 <% include footer %>
