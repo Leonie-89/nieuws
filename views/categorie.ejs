@@ -1,22 +1,25 @@
 <% include header %>
+<% include banner %>
+<% include navigatie %>
 
-<h1><a href="/">Nieuws demo homepage</a></h1>
+<span id="titel"><h2>Nieuwsitems voor de categorie <%- categorieen[id] %></h2></span>
 
-<h2>Nieuwsitems voor categorie <%- categorieen[id] %></h2>
 
   <% for (var i = 0; i < items.length; i++) { %>
     <% if (items[i].categorieen.indexOf(categorieen[id]) !== -1) { %>
-      <section>
-          <h2>
-            <a href=/items/<%- items[i].id %>><%- items[i].titel %></a>
-          </h2>
-          <img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>">
-          <p><%- items[i].datum %></p>
+            <div id="kop">
+                <h2>
+                  <a href=/items/<%- items[i].id %>><%- items[i].titel %></a>
+                </h2>
+            </div>
+            <div id="nieuwsbericht">
+                  <img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>">
 
-          <p>
-            <%- items[i].samenvatting %>
-          </p>
-      </section>
+                  <span id="datum"><p><%- items[i].datum %></p></span>
+
+                  <p><%- items[i].samenvatting %></p>
+                  <span id="verder_terug"><h3><a href=/items/<%- items[i].id %>>Lees Verder >></a></h3></span>
+            </div>
     <% } %>
   <% } %>
 

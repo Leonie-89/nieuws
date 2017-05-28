@@ -1,16 +1,8 @@
 <% include header %>
+<% include banner %>
+<% include navigatie %>
 
-<img src="./img/banner.png" id="banner"/>
-<img src="./img/banner_mobiel.png" id="banner_mobiel"/>
-
-
-<nav id="navigatie">
-  <% for (var i = 0; i < categorieen.length; i++) { %>
-    <a href="/categorieen/<%- i %> id="link"><%- categorieen[i] %></a>
-  <% } %>
-</nav>
-
-<div id="container"/>
+<div id="container">
   <% var teller = 1; %>
   <% nieuws.forEach(function(item){ %>
 
